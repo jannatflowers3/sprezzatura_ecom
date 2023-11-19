@@ -3,7 +3,7 @@
   <section class="aboutus">
     <div class="container">
         <div class="row justify-content-center ">
-            <div class="col-lg-10">
+            <div class="col-lg-6">
                 <div class="about_part">
                     <h3>About Us</h3>
                     <p>Sprezzatura an upscale clothing brand founded in 2020. currently operating in dhaka and working to reach the global market. our company culture promotes an open environment by being transparent, respectful and honest. we do quality work to offer high end products and we are customer committed.
@@ -20,6 +20,7 @@
             </div>
             <div class="col-lg-6">
                <div class="aboutimg">
+                <img src="../../../../../image/slider2.jpg" />
                 <!-- <img src="zapierLogo" /> -->
                 <!-- <img src="../../../../../public/images/image/Mirza-Faisal-Ahmed.jpeg" class="img-fluid" alt="team"> -->
                 <!-- <img src="../../../../../public/images/image/mesurment.webp" alt="aboutimg" class="img-fluid">  -->

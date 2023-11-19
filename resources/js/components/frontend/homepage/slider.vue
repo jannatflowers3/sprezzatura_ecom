@@ -8,7 +8,7 @@
 				<!-- end fixedc menu -->
 				<div class="col-lg-12">
 					<div v-if="sliders.length > 0" class="row">
-						<div :class="addons.includes('ishopet') ? 'col-lg-9' : 'col-lg-12'">
+						<div :class="addons.includes('ishopet') ? 'col-lg-4' : 'col-lg-12'">
 							<VueSlickCarousel class="hero-section" :class="{ 'ishopet-hero-section' : addons.includes('ishopet') }" v-bind="slick_settings" :rtl="settings.text_direction == 'rtl'">
 								<div class="hero-slide-item" v-for="(slider, i) in sliders" :key="i">
 									<div class="slider__img slider_div">
@@ -40,8 +40,7 @@
 							</div>
 						</div> -->
 
-
-						<!-- /.hero-banner-section -->
+					<!-- /.hero-banner-section -->
 					</div>
 				</div>
 			</div>

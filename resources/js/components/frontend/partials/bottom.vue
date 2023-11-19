@@ -9,7 +9,7 @@
 					<div class="col-sm-6 col-md-6" v-if="!addons.includes('ramdhani') && settings.seller_system == 1 && !authUser" :class="[classObj()]">
 						<div class="footer-widget widget-border" v-if="!authUser && settings.seller_system == 1">
 							<h3>{{ lang.seller_options }}</h3>
-							<ul class="global-list">
+							<!-- <ul class="global-list">
 								<li>
 									<router-link :to="{ name: 'login' }">{{ lang.login_as_seller }}</router-link>
 								</li>
@@ -20,7 +20,8 @@
 									}">{{ lang.signup_as_seller }}
 									</router-link>
 								</li>
-							</ul>
+							</ul> -->
+						<h1>sprezzatura</h1>
 						</div>
 					</div>
 					<div class="col-sm-6 col-md-6" :class="[classObj()]">
