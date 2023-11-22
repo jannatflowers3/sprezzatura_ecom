@@ -20,10 +20,9 @@
             </div>
             <div class="col-lg-6">
                <div class="aboutimg">
-                <img src="../../../../../image/slider2.jpg" />
-                <!-- <img src="zapierLogo" /> -->
-                <!-- <img src="../../../../../public/images/image/Mirza-Faisal-Ahmed.jpeg" class="img-fluid" alt="team"> -->
-                <!-- <img src="../../../../../public/images/image/mesurment.webp" alt="aboutimg" class="img-fluid">  -->
+                <li v-if="settings.visa_pay_banner"></li>
+                <img :src="getUrl('public/img/about_us.jpg')" alt="aboutimg" class="img-fluid " />
+            
                </div>
             </div>
 
@@ -36,12 +35,15 @@
         <div v-html="page.content"></div>
         <div class="teambg" :style="{ backgroundImage: 'url(' + teambg2 + ')' }"></div> -->
         
-        <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <div class="our_team text-center text-white">
+        <div class="row ">
+            <div class="col-lg-5">
+                <img :src="getUrl('public/img/Mirza-Faisal-Ahmed.jpeg')" alt="aboutimg" class="img-fluid " />
+             
+            </div>
+            <div class="col-lg-7">
+                <div class="our_team_title  text-center text-white">
                     <h2>Our Team</h2>
                 <p>We Believe In Making Memories and Experiences That Matter</p>
-                <img src="../../../../../public/images/image/Mirza-Faisal-Ahmed.jpeg" class="img-fluid" alt="">
                 <h5>Mirza Faisal Ahmed</h5>
                 <h6>Founder & CEO</h6>
                 <div class="team_icon">
@@ -58,8 +60,7 @@
 
 <script>
 import shimmer from "../partials/shimmer";
-// import ceoimage from "./assets/images/homepage/Mirza-Faisal-Ahmed.jpeg";
-import zapierLogo from '../../../../../public/images/image/Mirza-Faisal-Ahmed.jpeg'
+
 export default {
     name: "about",
     components: {
@@ -68,9 +69,8 @@ export default {
     data(){
       return {
           slug:this.$route.params.slug,
-        //   teambg2: './assets/images/Mirza-Faisal-Ahmed.jpeg', // Replace with the path to your actual image
-        //   teambg2: ' http://localhost/sprezzatura_ecom/public/images/Mirza-Faisal-Ahmed.jpeg?a1b3f19b74e8671380026f9b5cb55320',
-        }
+    
+    }
     },
     watch: {
         $route() {
@@ -101,52 +101,55 @@ export default {
 }
 </script>
 
-<style >
+<style scoped>
 
-.h2oclore{
-    color:blue;
-}
 .aboutus{
-    background-color:rgb(209 108 3);
-    color: #fff;
     padding: 80px 0px;
 }
 .aboutus h3, .our_team h2{
 font-size: 40px;
 font-family: Open Sans;
+color: #ed6d18;
 }
 .follow{
 padding: 30px 0px;
 }
 .follow i{
-    border: 2px solid #fff;
+    border: 2px solid #ed6d18;
     padding: 12px;
     margin-right: 10px;
     border-radius: 10px;
     margin-top: 20px;
+    color:#Fff;
+    background-color:#ed6d18;
 }
 .follow i:hover{
     background-color: #080f33;
+    border: 2px solid #080f33;
    transition: 0.4s;
    cursor: pointer;
 }
 .our_team{
     background-color: #080f33;
-    padding:50px 0px;
+    padding:80px 0px;
+    margin-bottom: 120px;
+    
 }
-.our_team h2{
+.our_team_title{
+    padding-top: 200px;
+}
+.our_team_title h2{
     color: #ed6d18;
     font-weight: 700;
 }
-.our_team img{
-    height: 300px;
-    margin: 30px 0px;
+.our_team_title h6{
+    padding:10px 0px 20px;
 }
-.our_team p{
+.our_team_title h6{
+    padding-top:10px;
+}
+.our_team_title p{
     margin-top: 20px;
-}
-.team_icon{
-
 }
 .team_icon i{
     border: 2px solid #fff;
@@ -158,12 +161,5 @@ padding: 30px 0px;
     background-color: #ed6d18;
     border: 2px solid #ed6d18;
     cursor: pointer;
-}
-
-.teambg{
-    /* background-image: url('../../../../../image/Mirza-Faisal-Ahmed.jpeg'); */
-    background-size: cover;
-    /* background-color: red; */
-    min-height: 300px;
 }
 </style>

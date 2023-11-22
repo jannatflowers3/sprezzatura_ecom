@@ -3,28 +3,75 @@
 		<div class="footer-top">
 			<div class="container">
 				<div class="footer-logo">
-					<router-link :to="{ name: 'home' }"><img loading="lazy" :src="settings.footer_logo" alt="preloader" class="img-fluid" /> </router-link>
+					<!-- <router-link :to="{ name: 'home' }"><img loading="lazy" :src="settings.footer_logo" alt="preloader" class="img-fluid" /> </router-link> -->
 				</div>
 				<div class="row">
-					<div class="col-sm-6 col-md-6" v-if="!addons.includes('ramdhani') && settings.seller_system == 1 && !authUser" :class="[classObj()]">
-						<div class="footer-widget widget-border" v-if="!authUser && settings.seller_system == 1">
-							<h3>{{ lang.seller_options }}</h3>
-							<!-- <ul class="global-list">
-								<li>
-									<router-link :to="{ name: 'login' }">{{ lang.login_as_seller }}</router-link>
-								</li>
-								<li>
-									<router-link :to="{
-										name: 'seller-register',
-										params: { type: 'seller' },
-									}">{{ lang.signup_as_seller }}
-									</router-link>
-								</li>
-							</ul> -->
-						<h1>sprezzatura</h1>
+					<!-- <div class="col-lg-4 col-sm-6 col-md-6" v-if="!addons.includes('ramdhani') && settings.seller_system == 1 && !authUser" :class="[classObj()]">
+						<div class="footer-widget widget-border footer_left" v-if="!authUser && settings.seller_system == 1"> -->
+							<div class="col-lg-4 col-sm-6 col-md-6" >
+						<div class="footer-widget widget-border footer_left">
+							<img :src="getUrl('image/Sprezzatura-Logo.png')" alt="footerlogo" class="img-fluid " />
+							<h5>An Exclusive Clothing Brand</h5>
+							<i class="fa-solid fa-location-dot footeraddress"></i> House # 82, Block-F, Road # 5, Banani , Dhaka-1213
+							<div class="footericon">		
+							
+							<p><i class="fa-solid fa-message "></i>info@sprezzaturabd.com
+							</p>
+						  <p>  <i class="fa-solid fa-message "></i> sales@sprezzaturabd.com</p>
+							</div>
+						
+							
+							
+
 						</div>
 					</div>
-					<div class="col-sm-6 col-md-6" :class="[classObj()]">
+					<div class="col-sm-6 col-md-6 col-lg-2" :class="[classObj()]">
+						<div class="footer-widget widget-border">
+							<h3>COMPANY INFO</h3>
+							<ul class="global-list" v-for="(link, i) in usefulLinks" :key="i">
+								<li>
+									<router-link :to="link.url">{{ link.label }}</router-link>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-3" :class="[classObj()]">
+						<div class="footer-widget widget-border">
+							<h3>OPENING HOUR</h3>
+							<p>Saturday To Thursday 10:00 PM to 6:00 PM</p>
+							<div class="social" v-if="settings.show_social_links && settings.show_social_links == 1">
+								<ul class="global-list">
+									<li v-if="settings.facebook_link">
+										<a target="_blank" :href="settings.facebook_link"><span class="mdi mdi-name mdi-facebook"></span></a>
+									</li>
+									<li v-if="settings.twitter_link">
+										<a target="_blank" :href="settings.twitter_link"><span class="mdi mdi-name mdi-twitter"></span></a>
+									</li>
+									<li v-if="settings.linkedin_link">
+										<a target="_blank" :href="settings.linkedin_link"><span class="mdi mdi-linkedin"></span></a>
+									</li>
+									<li v-if="settings.instagram_link">
+										<a target="_blank" :href="settings.instagram_link"><span class="mdi mdi-instagram"></span></a>
+									</li>
+									<li v-if="settings.youtube_link">
+										<a target="_blank" :href="settings.youtube_link"><span class="mdi mdi-youtube"></span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-12 col-lg-3">
+						<div class="footer-widget">
+							<h3>SHOP</h3>
+							<div v-html="settings.about_description"></div>
+							<!-- <img :src="getUrl('image/bkash.jpg')" alt="bkash" class="img-fluid " /> -->
+							
+						</div>
+					</div>
+
+					
+
+					<!-- <div class="col-sm-6 col-md-6" :class="[classObj()]">
 						<div class="footer-widget widget-border">
 							<h3>{{ lang.my_account }}</h3>
 							<ul class="global-list" v-if="!authUser">
@@ -81,24 +128,16 @@
 								>
 							</ul>
 						</div>
-					</div>
-					<div class="col-sm-6 col-md-6" :class="[classObj()]">
-						<div class="footer-widget widget-border">
-							<h3>{{ lang.useful_links }}</h3>
-							<ul class="global-list" v-for="(link, i) in usefulLinks" :key="i">
-								<li>
-									<router-link :to="link.url">{{ link.label }}</router-link>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-6 col-md-6 col-lg-3">
+					</div> -->
+
+					<!-- <div class="col-sm-6 col-md-6 col-lg-3">
 						<div class="footer-widget widget-border">
 							<h3>{{ lang.contact_us }}</h3>
 							<div class="address">
 								<ul class="global-list">
 									<li>
 										<h4><span class="mdi mdi-home-outline"></span>{{ lang.address }}</h4>
+										ddgdgdf
 										<p>{{ settings.footer_contact_address }}</p>
 									</li>
 									<li>
@@ -112,32 +151,8 @@
 								</ul>
 							</div>
 						</div>
-					</div>
-					<div class="col-sm-12 col-md-12 col-lg-3">
-						<div class="footer-widget">
-							<h3>{{ lang.about }}</h3>
-							<div v-html="settings.about_description"></div>
-							<div class="social" v-if="settings.show_social_links && settings.show_social_links == 1">
-								<ul class="global-list">
-									<li v-if="settings.facebook_link">
-										<a target="_blank" :href="settings.facebook_link"><span class="mdi mdi-name mdi-facebook"></span></a>
-									</li>
-									<li v-if="settings.twitter_link">
-										<a target="_blank" :href="settings.twitter_link"><span class="mdi mdi-name mdi-twitter"></span></a>
-									</li>
-									<li v-if="settings.linkedin_link">
-										<a target="_blank" :href="settings.linkedin_link"><span class="mdi mdi-linkedin"></span></a>
-									</li>
-									<li v-if="settings.instagram_link">
-										<a target="_blank" :href="settings.instagram_link"><span class="mdi mdi-instagram"></span></a>
-									</li>
-									<li v-if="settings.youtube_link">
-										<a target="_blank" :href="settings.youtube_link"><span class="mdi mdi-youtube"></span></a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
+					</div> -->
+				
 				</div><!-- /.row -->
 			</div><!-- /.container -->
 		</div><!-- /.footer-top -->
@@ -263,3 +278,31 @@ export default {
 	},
 };
 </script>
+<style scoped>
+.footer_left img{
+	width: 60%;
+}
+.footer_left h5{
+	font-size:17px;
+	
+}
+.footeraddress{
+	margin-top: 10px;
+	font-size: 14px;
+}
+.footericon i{
+	font-size: 15px;
+	margin-right: 10px;
+;
+}
+.footericon p{
+	font-size: 15px;
+	margin:0;
+}
+.footer-logo{
+	border-bottom:1px solid #fff;
+}
+.footer-social ul {
+	/* border-bottom:1px solid #fff; */
+}
+</style>

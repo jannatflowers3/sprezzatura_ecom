@@ -3,8 +3,11 @@ const home = () => import(/* webpackPrefetch: true */
     '../components/frontend/pages/home');
 const about = () => import(/* webpackPrefetch: true */
     '../components/frontend/pages/about');
-    // const besboke = () => import(/* webpackPrefetch: true */
-    // '../components/frontend/pages/besboke');
+    const bespoke = () => import(/* webpackPrefetch: true */
+    '../components/frontend/pages/bespoke');
+    const showroom = () => import(/* webpackPrefetch: true */
+    '../components/frontend/pages/showroom');
+    
 const allBlogs = () => import(/* webpackPrefetch: true */
     '../components/frontend/pages/blogs');
 const blogDetails = () => import(/* webpackPrefetch: true */
@@ -118,11 +121,17 @@ export const routes = [
                 name: 'about',
                 component: about
             },
-            // {
-            //     path: '/besboke',
-            //     name: 'besboke',
-            //     component: besboke
-            // },
+            {
+                path: '/bespoke',
+                name: 'bespoke',
+                component: bespoke
+            },
+            {
+                path: '/showroom',
+                name: 'showroom',
+                component: showroom
+            },
+            
             
             {
                 path: '/track-order',

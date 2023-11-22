@@ -39,7 +39,7 @@
 									><span class="mdi mdi-name mdi-apple"></span> <small>{{ lang.app_store }}</small></a
 								>
 							</li>
-							<li v-if="!addons.includes('ramdhani') && settings.seller_system == 1 && !authUser">
+							<!-- <li v-if="!addons.includes('ramdhani') && settings.seller_system == 1 && !authUser">
 								<router-link
 									:to="{
 										name: 'seller-register',
@@ -48,7 +48,7 @@
 								>
 									{{ lang.be_a_seller }}
 								</router-link>
-							</li>
+							</li> -->
               <li v-if="addons.includes('affiliate')" >
                 <router-link
                     :to="{
@@ -147,7 +147,8 @@
                                                 C397.05,31.57,390.2,26.56,390.2,17.21z"
 								/>
 							</svg>
-							<img v-else :src="settings.dark_logo" alt="Logo" class="img-fluid" />
+							<!-- <img v-else :src="settings.dark_logo" alt="Logo" class="img-fluid" /> -->
+							<img :src="getUrl('image/Sprezzatura-Logo.png')" alt="footerlogo" class="img-fluid " />
 						</router-link>
 					</div>
 					<div class="sg-search">
@@ -196,22 +197,22 @@
 									</div>
 									<span class="badge" v-if="wishlists > 0">{{ wishlists }}</span>
 								</router-link>
-                <a href="javascript:void(0)" v-else>
-									<div class="icon"
-										><img alt="Compare Icon" class="img-fluid" :src="getUrl('public/images/others/wishlist.svg')" />
+                <!-- <a href="#" v-else> -->
+									<div class="icon text-white"
+										><img alt="Compare Icon" class="img-fluid text-white" :src="getUrl('public/images/others/wishlist.svg')" />
 										<!---->
 									</div>
 									<span class="badge" v-if="wishlists > 0">{{ wishlists }}</span>
-								</a>
+								<!-- </a> -->
 							</li>
 
-							<li class="sg-dropdown cart">
-								<router-link :to="{ name: 'cart' }" class="">
-									<div class="icon"><img alt="bag Icon" class="img-fluid" :src="getUrl('public/images/others/bag.svg')" />
+							<li class="sg-dropdown cart text-white">
+								<router-link :to="{ name: 'cart' }" class="text-white">
+									<div class="icon"><img alt="bag Icon" class="img-fluid text-white" :src="getUrl('public/images/others/bag.svg')" />
 										<span v-if="carts && carts.length > 0" class="badge">{{ carts.filter(cart => cart.is_buy_now == false).length }}</span>
 									</div>
 								</router-link>
-								<div class="sg-dropdown-menu" v-if="carts && carts.length > 0">
+								<div class="sg-dropdown-menu text-white" v-if="carts && carts.length > 0">
 									<span class="title">{{ lang.cart_items }}</span>
 									<ul class="global-list">
 										<li v-for="(cart, index) in carts" :key="index">
@@ -243,7 +244,7 @@
 								</div>
 							</li>
 
-							<li class="compare-icon">
+							<li class="compare-icon text-white">
 								<router-link :to="{ name: 'compare.list' }">
 									<div class="icon"><img :src="getUrl('public/images/others/compare.svg')" alt="List" /></div>
 									<span v-if="compareList > 0" class="badge">{{ compareList }}</span>
