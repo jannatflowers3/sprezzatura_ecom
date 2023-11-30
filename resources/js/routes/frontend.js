@@ -7,6 +7,8 @@ const about = () => import(/* webpackPrefetch: true */
     '../components/frontend/pages/bespoke');
     const showroom = () => import(/* webpackPrefetch: true */
     '../components/frontend/pages/showroom');
+    const sizeguide = () => import(/* webpackPrefetch: true */
+    '../components/frontend/pages/sizeguide');
     
 const allBlogs = () => import(/* webpackPrefetch: true */
     '../components/frontend/pages/blogs');
@@ -126,6 +128,12 @@ export const routes = [
                 name: 'bespoke',
                 component: bespoke
             },
+            {
+                path: '/size-guide',
+                name: 'sizeguide',
+                component: sizeguide
+            },
+           
             {
                 path: '/showroom',
                 name: 'showroom',

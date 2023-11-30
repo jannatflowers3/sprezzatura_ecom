@@ -2,7 +2,6 @@
   <div class="">
 
 <!-- besboke page start -->
-<iframe width="560" height="415" src="https://www.youtube.com/embed/1SPmOKhWNg0?si=DE4vzyo_quCpdmb" autoplay  ></iframe>
 <section class="besboke_bg">
 <div class="container-fluid">
 <div class="row justify-content-center">
@@ -22,11 +21,16 @@
           </div>
         </div>
         <div class="col-lg-4 col-md-4">
-            <img src="image/truebespoke.webp" alt="">
+            <div class="bespokeimg">
+            <img :src="getUrl('public/img/truebespoke.webp')" alt="truebeskpoke" class="img-fluid  " />
+
+            </div>
             </div>
 </div>
 </div>
 </section>
+<iframe width="560" height="415" src="https://www.youtube.com/embed/1SPmOKhWNg0?si=DE4vzyo_quCpdmb" autoplay  ></iframe>
+
 <section class="pattern_cutting">
 <div class="container">
 <div class="row justify-content-center">
@@ -34,7 +38,7 @@
     <div class="col-lg-6">
         <div class="pattern_chose">
             <h5> Choosing a pattern and style:</h5>
-        <img src="image/pattern_chose.webp" alt="">
+            <img :src="getUrl('public/img/baner1.jpg')" alt="pattern" class="img-fluid mt-5 " />
         
         </div>
     </div>
@@ -59,7 +63,8 @@
         </div> 
         <div class="col-lg-6">
             <div class="pattern_chose">
-            <img src="image/pattern2.webp" alt="">
+            <img :src="getUrl('public/img/pattern2.webp')" alt="pattern" class="img-fluid  " />
+
             </div>
         </div> 
  </div>
@@ -67,8 +72,7 @@
  <div class="row justify-content-center mt-5 pt-5"> 
         <div class="col-lg-6">
             <div class="pattern_chose">
-            <img src="image/cutting.webp" alt="">
-            
+            <img :src="getUrl('public/img/cutting.webp')" alt="pattern" class="img-fluid mt-5 " />
             </div>
         </div> 
         <div class="col-lg-6">
@@ -96,7 +100,7 @@
             <div class="col-lg-4 col-md-4 col-sm-4">
               <div class="besboke_part">
                 <h4>1. Make Appointment</h4>
-                <img src="image/appointment.jpg" alt="besboke">
+            <img :src="getUrl('public/img/smart-engenering.png')" alt="pattern" class="img-fluid mt-5 " />
                 <p>Appointments can be made anytime in office at House # 82, Block-F, Road # 5, Banani , Dhaka-1213, area by calling us on 0 8801558259678 or send us an email:
                    info@sprezzaturabd.com </p>
               </div>
@@ -104,14 +108,14 @@
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="besboke_part">
                 <h4>3. Get Measured</h4>
-                <img src="image/mesurment1.jpg" alt="besboke">
+            <img :src="getUrl('public/img/customised-pattern.png')" alt="pattern" class="img-fluid mt-5 " />
                 <p>I meet every customer to measure and fit them. I bring my measuring tape, fabric style options and try on fit samples to take the guesswork out of the measuring experience.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="besboke_part">
                 <h4>3. Choose Fabrics</h4>
-                <img src="image/fabric.jpg" alt="besboke">
+                <img :src="getUrl('public/img/finest-workmanship.png')" alt="pattern" class="img-fluid mt-5 " />
                 <p>An exciting aspect of a creating your new BESPOKE shirts is the luxury of choosing from an extensive collection of superb fabrics.We have a selection of over 1000 luxury European fabrics to choose from.
 
                 </p>
@@ -123,21 +127,24 @@
             <div class="col-lg-4 col-md-4 col-sm-4">
               <div class="besboke_part">
                 <h4>4. Design Shirt</h4>
-                <img src="image/design.jpg" alt="besboke">
+                <img :src="getUrl('public/img/well-cut-shirt.png')" alt="pattern" class="img-fluid mt-5 " />
+
                 <p>I will personally guide you through our discerning selection of design options. You can choose between 15 collars and 10 cuff shapes, various pocket designs, stitching, buttons, and monograms. </p>
               </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="besboke_part">
                 <h4>5. Construct Shirt</h4>
-                <img src="image/construt.jpg" alt="besboke">
+                <img :src="getUrl('public/img/precision-fit-shirt.png')" alt="pattern" class="img-fluid mt-5 " />
+
                 <p>In 18 working days your beautiful shirt will be cut, hand sewn and finished to the highest standard in our Sydney workroom. Every shirt is hand checked then pressed and packed ready for delivery.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="besboke_part">
                 <h4>6. CONSULTATION</h4>
-                <img src="image/delivery.jpg" alt="besboke">
+                <img :src="getUrl('public/img/delivery.jpg')" alt="pattern" class="img-fluid mt-5 " />
+
                 <p>No appointment is necessary for a bespoke consultation. Our team will guide you through the myriad of fabrics on offer and then advise you on the various collars and cuff options available.
                 </p>
                 </div>
@@ -208,22 +215,6 @@
   padding: 20px 10px; 
   color: #686868;
 }
-.besboke_part img {
-    width: 100%;
-    border-radius: 5px;
-}
-.pattern_chose img{
-    width: 100%;  
-}
-.pattern_chose{
-    transition: .3s ease-in-out;
-    width: 100%;  
-    overflow: hidden;
-}
-.pattern_chose img:hover{
-  	transform: scale(1);
-    display: block;
-}
 
 .left_pattern{
     background-color: #080f33;
@@ -238,7 +229,8 @@
     color: #fff;
 }
 .besboke_bg{
-    background-image: url('../../../../../image/basebookbg.jpg');
+
+    background-image: url('../../../../../public/img/bespoke.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   margin-bottom: 50px;
@@ -252,6 +244,22 @@
 .pattern_content h5{
     margin: 27px 0px;
 }
+.bespokeimg, .pattern_chose, .besboke_part{
+    overflow: hidden;
+}
+.bespokeimg img, .pattern_chose img, .besboke_part img{
+    display: block;
+    transition: transform 250ms;
+    border-radius: 10px;
+}
+.bespokeimg img:hover, .pattern_chose img:hover, .besboke_part img:hover{
+   
+   transform: scale(1.1);
+   border-radius: 20px;
+}
+
+
+
 </style>
 
 

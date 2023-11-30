@@ -6,9 +6,7 @@
 					<!-- <router-link :to="{ name: 'home' }"><img loading="lazy" :src="settings.footer_logo" alt="preloader" class="img-fluid" /> </router-link> -->
 				</div>
 				<div class="row">
-					<!-- <div class="col-lg-4 col-sm-6 col-md-6" v-if="!addons.includes('ramdhani') && settings.seller_system == 1 && !authUser" :class="[classObj()]">
-						<div class="footer-widget widget-border footer_left" v-if="!authUser && settings.seller_system == 1"> -->
-							<div class="col-lg-4 col-sm-6 col-md-6" >
+					<div class="col-lg-4 col-sm-6 col-md-6">
 						<div class="footer-widget widget-border footer_left">
 							<img :src="getUrl('image/Sprezzatura-Logo.png')" alt="footerlogo" class="img-fluid " />
 							<h5>An Exclusive Clothing Brand</h5>
@@ -19,13 +17,9 @@
 							</p>
 						  <p>  <i class="fa-solid fa-message "></i> sales@sprezzaturabd.com</p>
 							</div>
-						
-							
-							
-
 						</div>
 					</div>
-					<div class="col-sm-6 col-md-6 col-lg-2" :class="[classObj()]">
+					<div class="col-lg-2 col-sm-6 col-md-6">
 						<div class="footer-widget widget-border">
 							<h3>COMPANY INFO</h3>
 							<ul class="global-list" v-for="(link, i) in usefulLinks" :key="i">
@@ -35,7 +29,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-sm-6 col-md-6 col-lg-3" :class="[classObj()]">
+					<div class="col-sm-6 col-md-6 col-lg-3">
 						<div class="footer-widget widget-border">
 							<h3>OPENING HOUR</h3>
 							<p>Saturday To Thursday 10:00 PM to 6:00 PM</p>
@@ -60,7 +54,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-12 col-md-12 col-lg-3">
+					<div class="col-sm-6 col-md-6 col-lg-3">
 						<div class="footer-widget">
 							<h3>SHOP</h3>
 							<div v-html="settings.about_description"></div>
@@ -69,6 +63,38 @@
 						</div>
 					</div>
 
+
+
+
+
+
+					<!-- <div class="col-lg-4 col-sm-6 col-md-6" v-if="!addons.includes('ramdhani') && settings.seller_system == 1 && !authUser" :class="[classObj()]">
+						<div class="footer-widget widget-border footer_left" v-if="!authUser && settings.seller_system == 1"> -->
+						
+							<!-- <div class="col-lg-4 col-sm-6 col-md-6" >
+						<div class="footer-widget widget-border footer_left">
+							<img :src="getUrl('image/Sprezzatura-Logo.png')" alt="footerlogo" class="img-fluid " />
+							<h5>An Exclusive Clothing Brand</h5>
+							<i class="fa-solid fa-location-dot footeraddress"></i> House # 82, Block-F, Road # 5, Banani , Dhaka-1213
+							<div class="footericon">		
+							
+							<p><i class="fa-solid fa-message "></i>info@sprezzaturabd.com
+							</p>
+						  <p>  <i class="fa-solid fa-message "></i> sales@sprezzaturabd.com</p>
+							</div>
+						</div>
+					</div> -->
+					<!-- <div class="col-sm-6 col-md-6 col-lg-2" :class="[classObj()]">
+						<div class="footer-widget widget-border">
+							<h3>COMPANY INFO</h3>
+							<ul class="global-list" v-for="(link, i) in usefulLinks" :key="i">
+								<li>
+									<router-link :to="link.url">{{ link.label }}</router-link>
+								</li>
+							</ul>
+						</div>
+					</div> -->
+				
 					
 
 					<!-- <div class="col-sm-6 col-md-6" :class="[classObj()]">

@@ -6,9 +6,29 @@
 					<sidebar_categories :slider="true" :home="0"></sidebar_categories>
 				</div> -->
 				<!-- end fixedc menu -->
-				<div class="col-lg-12">
+
+				<section class="slider">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-lg-10">
+							<div class="header_title text-center">
+							<h1>We Believe in Making Memories and Experiences that Matter</h1>
+							<a href="sprezzatura_ecom/products" class="header_btn">Shop Now</a>
+							</div>
+						
+						</div>
+						</div>
+					</div>
+				</section>
+
+
+
+
+				
+				
+				<!-- <div class="col-lg-12">
 					<div v-if="sliders.length > 0" class="row">
-						<div :class="addons.includes('ishopet') ? 'col-lg-4' : 'col-lg-12'">
+						<div :class="addons.includes('ishopet') ? 'col-lg-3' : 'col-lg-12'">
 							<VueSlickCarousel class="hero-section" :class="{ 'ishopet-hero-section' : addons.includes('ishopet') }" v-bind="slick_settings" :rtl="settings.text_direction == 'rtl'">
 								<div class="hero-slide-item" v-for="(slider, i) in sliders" :key="i">
 									<div class="slider__img slider_div">
@@ -25,7 +45,7 @@
 						</div>
 
 
-						<!-- <div :class="addons.includes('ishopet') ? 'col-lg-3' : 'col-lg-12'">
+						<div :class="addons.includes('ishopet') ? 'col-lg-4' : 'col-lg-12'">
 							<div class="hero-banner-section" :class="{ 'ishopet-hero-banner' : addons.includes('ishopet') }">
 								<div class="banner__items">
 									<div class="banner__item" v-for="(banner, index) in banners" :key="'banner' + index">
@@ -38,11 +58,11 @@
 									</div>
 								</div>
 							</div>
-						</div> -->
-
-					<!-- /.hero-banner-section -->
+						</div>				
 					</div>
-				</div>
+				</div> -->
+				
+<!-- end slide and slider banner -->
 			</div>
 		</div>
 	</section>
@@ -93,3 +113,31 @@ export default {
   },
 };
 </script>
+<style scoped>
+.slider{
+	background-image: url('../../../../../public/img/slider2.jpg');
+	background-repeat: no-repeat;
+	min-height:600px;
+	background-size: cover;
+}
+.header_title h1{
+	margin-top: 200px;
+	color: #f28412;
+    margin-bottom: 50px;
+	font-size: 40px;
+	line-height: 55px;
+}
+.header_btn{
+	padding: 13px 40px;
+	color: #fff;
+	background-color: #080f33;
+    border:1px solid #080f33;	
+	margin-top: 50px;
+	border-radius: 20px;
+}
+.header_btn:hover{
+background-color: #f28412;
+	border:1px solid #f28412;
+transition: 0.3s;
+}
+</style>

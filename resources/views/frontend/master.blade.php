@@ -67,6 +67,8 @@
     <link rel="stylesheet" href="{{ static_asset('frontend/css/vue-slick-carousel-theme.css') }}?version={{$version}}">
     <link rel="stylesheet" href="{{ static_asset('frontend/css/vue-select.css') }}?version={{$version}}">
 
+
+
     @if(isDemoServer())
         <link rel="stylesheet" href="{{ static_asset('frontend/css/color-switcher.css') }}?version={{$version}}">
     @endif

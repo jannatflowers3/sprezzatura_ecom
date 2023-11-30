@@ -77,10 +77,14 @@
 								<router-link :class="{ has_compare: compareList > 0 }" :to="{ name: 'compare.list' }"
 									>{{ lang.compare }} <span v-if="compareList > 0">({{ compareList }})</span></router-link
 								>
+								<!-- <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-youtube"></i> -->
 							</li>
-							<li>
+							<!-- <li>
 								<router-link :to="{ name: 'blogs' }">{{ lang.blog }}</router-link>
-							</li>
+							</li> -->
 						</ul>
 					</div>
 				</div> </div
@@ -148,7 +152,7 @@
 								/>
 							</svg>
 							<!-- <img v-else :src="settings.dark_logo" alt="Logo" class="img-fluid" /> -->
-							<img :src="getUrl('image/Sprezzatura-Logo.png')" alt="footerlogo" class="img-fluid " />
+							<img :src="getUrl('image/Sprezzatura-Logo.png')" alt="headerlogo" class="img-fluid " />
 						</router-link>
 					</div>
 					<div class="sg-search">
@@ -189,22 +193,22 @@
 					</div>
 					<div class="user-option">
 						<ul class="global-list user-shop-option">
-							<li>
+							<!-- <li>
 								<router-link :to="{ name: 'wishlist' }" v-if="authUser && authUser.user_type == 'customer'">
 									<div class="icon"
 										><img alt="Compare Icon" class="img-fluid" :src="getUrl('public/images/others/wishlist.svg')" />
-										<!---->
+									
 									</div>
 									<span class="badge" v-if="wishlists > 0">{{ wishlists }}</span>
 								</router-link>
-                <!-- <a href="#" v-else> -->
+                <a :href="getUrl('checkout')" v-else>
 									<div class="icon text-white"
 										><img alt="Compare Icon" class="img-fluid text-white" :src="getUrl('public/images/others/wishlist.svg')" />
-										<!---->
+									
 									</div>
 									<span class="badge" v-if="wishlists > 0">{{ wishlists }}</span>
-								<!-- </a> -->
-							</li>
+								</a>
+							</li> -->
 
 							<li class="sg-dropdown cart text-white">
 								<router-link :to="{ name: 'cart' }" class="text-white">

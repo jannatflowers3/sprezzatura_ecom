@@ -12,16 +12,16 @@
                 </div>
                 <div class="follow">
                     <h4>Follow Us :</h4>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-linkedin"></i>
-                    <i class="fa-brands fa-youtube"></i>
+                   <a href="https://www.facebook.com/houseofsprezzaturabd"><i class="fa-brands fa-facebook"></i></a> 
+                  <a href="https://www.instagram.com/houseofsprezzaturabd/"> <i class="fa-brands fa-instagram"></i></a> 
+                  <a href="https://bd.linkedin.com/company/sprezzaturabd">    <i class="fa-brands fa-linkedin"></i></a> 
+                  <a href="https://www.youtube.com/@houseofsprezzatura"> <i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
                <div class="aboutimg">
                 <li v-if="settings.visa_pay_banner"></li>
-                <img :src="getUrl('public/img/about_us.jpg')" alt="aboutimg" class="img-fluid " />
+                <img :src="getUrl('public/img/about_us.jpg')" alt="aboutimg" class="img-fluid  " />
             
                </div>
             </div>
@@ -31,13 +31,11 @@
 </section>
     <section class="our_team">
     <div class="container" v-if="lengthCounter(page)>0">
-        <!-- <h1>{{page.title}}</h1>
-        <div v-html="page.content"></div>
-        <div class="teambg" :style="{ backgroundImage: 'url(' + teambg2 + ')' }"></div> -->
-        
         <div class="row ">
             <div class="col-lg-5">
-                <img :src="getUrl('public/img/Mirza-Faisal-Ahmed.jpeg')" alt="aboutimg" class="img-fluid " />
+                <div class="team">
+                    <img :src="getUrl('public/img/Mirza-Faisal-Ahmed.jpeg')" alt="aboutimg" class="img-fluid " />
+                </div>
              
             </div>
             <div class="col-lg-7">
@@ -47,8 +45,8 @@
                 <h5>Mirza Faisal Ahmed</h5>
                 <h6>Founder & CEO</h6>
                 <div class="team_icon">
-                <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
+                    <a href="https://www.facebook.com/houseofsprezzaturabd"><i class="fa-brands fa-facebook"></i></a> 
+                  <a href="https://www.instagram.com/houseofsprezzaturabd/"> <i class="fa-brands fa-instagram"></i></a> 
                 </div>
                 </div>
             </div>
@@ -108,8 +106,7 @@ export default {
 }
 .aboutus h3, .our_team h2{
 font-size: 40px;
-font-family: Open Sans;
-color: #ed6d18;
+padding-bottom: 20px;
 }
 .follow{
 padding: 30px 0px;
@@ -156,10 +153,26 @@ padding: 30px 0px;
     padding: 12px;
     margin-right: 10px;
     border-radius: 10px;
+    color: #fff;
 }
 .team_icon i:hover{
     background-color: #ed6d18;
     border: 2px solid #ed6d18;
     cursor: pointer;
 }
+.team, .aboutimg{
+overflow: hidden;
+}
+
+.team img, .aboutimg img{
+    display: block;
+    transition: transform 250ms;
+    border-radius: 10px;
+}
+.team img:hover, .aboutimg img:hover{
+   
+    transform: scale(1.1);
+    border-radius: 20px;
+}
+
 </style>

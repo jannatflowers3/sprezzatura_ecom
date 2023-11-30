@@ -75,7 +75,6 @@ export default {
           return products[i].product;
         }
       }
-
       return false;
     },
     carts() {
