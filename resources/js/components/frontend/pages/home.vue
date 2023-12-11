@@ -30,11 +30,15 @@
                  :latest_products="componentName == 'latest_products' && homeResults[index] ? homeResults[index].data : []"
                  :video_shopping="addons.includes('video_shopping') && componentName == 'video_shopping' && homeResults[index] ? homeResults[index].data : []">
       </component>
+
     </div>
     <viewed_product v-if="settings.recent_viewed == 1 "></viewed_product>
     <subscribe v-if="settings.subscription_section && settings.subscription_section == 1"></subscribe>
     <deal v-if="settings.article_section && settings.article_section == 1"></deal>
+    <!-- <h1>Our Achievement</h1> -->
   </div>
+
+ 
 </template>
 
 <script>

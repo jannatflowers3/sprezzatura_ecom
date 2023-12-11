@@ -75,10 +75,13 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            @if(count($value) > 2)
+                                                                
+                                                            @if(count($value) >3)
                                                             <ol class="dd-list">
+                                                                
                                                                 @if(@is_array($value[0]))
-                                                                    @foreach(array_splice($value, 2) as $j => $sub)
+                                            
+                                                                    @foreach(array_splice($value, 3) as $j => $sub )
                                                                             <li class="dd-item dd3-item">
                                                                                 <input type="hidden" name="lang" id="lang" value="{{$lang}}">
                                                                                 <input type="hidden" name="menu_lenght[]" id="menu_lenght" value="2">

@@ -7,7 +7,7 @@
                  <p>This size guide refers to the body of the customer not to the product. Take your measures according with the guide and select your suitable size. To better understand the fit and length of each style you must check the photos and the info of what size the model is wearing. We recommend that you ask someone to help when measuring. Always stand straight to be more precise.
                  </p>
                  <img :src="getUrl('public/img/Slim-Fit.jpg')" alt="slimfit" class="img-fluid" />
-                 <img :src="getUrl('public/img/Classic-Fit.jpg')" alt="classicfit" class="img-fluid" />
+                 <img :src="getUrl('public/img/Classic-Fit.jpg')" alt="classicfit" class="img-fluid mt-5 mb-5" />
                  <img :src="getUrl('public/img/Regular-Fit.jpg')" alt="regularfit" class="img-fluid" />
                  
                 </div>

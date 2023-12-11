@@ -16,7 +16,7 @@
                 </div>
                 <h3>Made-to-measure shirts vs bespoke shirts: what’s the difference?</h3>
              <p>We cater to a broad range of both traditional and contemporary tastes, as well as those who like to wear a more unique look. For example, you can personalise your shirt by adding contrast trim fabrics to your inside neckband, inside cuffs and down the front of your shirt. We have over 10 different buttons to choose from and various collars and cuffs styles for you to mix and match. The possibilities are endless… (don’t worry we will guide you through the whole process). </p>
-                 <a href="http://localhost/sprezzatura_ecom/contact" class="besboke_contact">Contact Us</a>
+                 <a href="https://sprezzaturabd.com//contact" class="besboke_contact">Contact Us</a>
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@
  <!-- 2nd row start -->
  <div class="row justify-content-center mt-5 pt-5">
     <div class="col-lg-6">
-        <div class="pattern_content">
+        <div class="pattern_content mt-5">
             <h5> YOUR SPECIFICATION
             </h5>
             <p>The flawless fit and attention to detail of our bespoke shirts makes each creation a timeless one-off and their custom-made nature allows you to become the designer, adding or changing whichever elements you wish. Here, we note down all your design requests.</p>
@@ -76,7 +76,7 @@
             </div>
         </div> 
         <div class="col-lg-6">
-            <div class="pattern_content">
+            <div class="pattern_content mt-5 pt-5">
                 <h5> CRAFTING YOUR SHIRT
                 </h5>
                 <p>Next, our experienced seamstresses masterfully cut your chosen cloth by hand. They use pencil marks to indicate any specific requests such as a minutely shorter sleeve. Hand-worked sewing machines are then used to bring the shirt together - they produce stronger seams while maintaining accuracy..</p>
@@ -96,7 +96,7 @@
                 <h1>HOW IT WORKS</h1>
             </div>
         </div>
-        <div class="row mt-5 justify-content-center">
+        <div class="row mt-5 justify-content-center pt-5">
             <div class="col-lg-4 col-md-4 col-sm-4">
               <div class="besboke_part">
                 <h4>1. Make Appointment</h4>
@@ -162,7 +162,7 @@
 <style scoped>
 .bespoke_title{
     margin:50px 0px;
-    font-size: 40px;
+    font-size: 30px;
 }
 .besboke_servive h3{
     color: #23272a;
@@ -180,7 +180,8 @@
     padding: 35px 40px;
 }
 .besboke_contact{
-    background-color: #FE7E17;
+ 
+    background-color: #080f33;
     color: #ffffff !important;
     padding: 12px 55px;
     transition: all 0.5s;
@@ -189,8 +190,7 @@
     text-decoration: none;
 }
 .besboke_contact:hover{
-    background-color: #080f33;
-    text-decoration: underline;
+    background-color: #FE7E17;
 }
 .besboke_work{
     margin: 50px 0px;
@@ -229,14 +229,10 @@
     color: #fff;
 }
 .besboke_bg{
-
-    background-image: url('../../../../../public/img/bespoke.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
   margin-bottom: 50px;
 }
 .pattern_title{
-    font-size: 53px;
+    font-size: 46px;
     font-family: Open Sans;
     font-weight: 800;
     margin: 48px 0px
@@ -246,16 +242,18 @@
 }
 .bespokeimg, .pattern_chose, .besboke_part{
     overflow: hidden;
+
 }
 .bespokeimg img, .pattern_chose img, .besboke_part img{
     display: block;
     transition: transform 250ms;
     border-radius: 10px;
+    border-radius: 20px;
 }
 .bespokeimg img:hover, .pattern_chose img:hover, .besboke_part img:hover{
-   
+    border-radius: 20px;
    transform: scale(1.1);
-   border-radius: 20px;
+
 }
 
 

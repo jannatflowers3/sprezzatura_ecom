@@ -40,9 +40,9 @@
             </div>
             <div class="col-lg-7">
                 <div class="our_team_title  text-center text-white">
-                    <h2>Our Team</h2>
+                    <!-- <h2>Our Team</h2> -->
                 <p>We Believe In Making Memories and Experiences That Matter</p>
-                <h5>Mirza Faisal Ahmed</h5>
+                <h2>Mirza Faisal Ahmed</h2>
                 <h6>Founder & CEO</h6>
                 <div class="team_icon">
                     <a href="https://www.facebook.com/houseofsprezzaturabd"><i class="fa-brands fa-facebook"></i></a> 
@@ -104,7 +104,7 @@ export default {
 .aboutus{
     padding: 80px 0px;
 }
-.aboutus h3, .our_team h2{
+.aboutus h3{
 font-size: 40px;
 padding-bottom: 20px;
 }

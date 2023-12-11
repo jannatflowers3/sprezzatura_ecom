@@ -323,9 +323,9 @@
                           menu.label
                         }}<span v-if="Object.keys(menu).length > 2" class="icon mdi mdi-name mdi-chevron-down"></span>
                       </router-link>
-                      <ul class="sg-dropdown-menu" :class="{ 'd-block': subMenu, 'd-none': !subMenu }"
+                      <ul class="sg-dropdown-menu" :class="subMenu ?'d-block':'d-none'"
                           v-if="Object.keys(menu).length > 2">
-                        <li v-for="(sub_menu, j) in menu" :key="'sub_menu' + j"v-if="sub_menu.url">
+                        <li v-for="(sub_menu, j) in menu" :key="'sub_menu' + j" v-if="sub_menu.url">
                           <a v-if="urlCheck(sub_menu.url)" :href="sub_menu.url">{{ sub_menu.label }}</a>
                           <router-link v-else :to="sub_menu.url">{{ sub_menu.label }}</router-link>
                         </li>
