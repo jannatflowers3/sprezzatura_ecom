@@ -210,7 +210,7 @@
 								</a>
 							</li> -->
 
-							<li class="sg-dropdown cart text-white">
+							<li class="sg-dropdown cart text-white"  style="color:red">
 								<router-link :to="{ name: 'cart' }" class="text-white">
 									<div class="icon"><img alt="bag Icon" class="img-fluid text-white" :src="getUrl('public/images/others/bag.svg')" />
 										<span v-if="carts && carts.length > 0" class="badge">{{ carts.filter(cart => cart.is_buy_now == false).length }}</span>

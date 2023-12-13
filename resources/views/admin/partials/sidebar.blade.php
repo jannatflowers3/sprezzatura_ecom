@@ -10,8 +10,10 @@
         <div class="sidebar-brand">
             <a href="{{ route('dashboard') }}">
                 <img
-                        src="{{($logo != [] && is_file_exists($logo['image_100x38'])) ? static_asset($logo['image_100x38']) : static_asset('images/default/logo.png') }}"
-                        alt="Logo"></a>
+                        src="{{($logo != [] && is_file_exists($logo['image_100x38'])) ? static_asset($logo['image_100x38']) : static_asset('img/Sprezzatura-Logo.png') }}"
+                        alt="Logo">
+                       
+                        <img src="{{ url('../../../../public/img/Sprezzatura-Logo.png') }} " alt="logo"> </a>
         </div>
         <ul class="sidebar-menu">
             <li class="@yield('dashboard')"><a class="nav-link" href="{{ route('dashboard') }}"><i
@@ -869,7 +871,7 @@
             @if(hasPermission('android_setting_update') || hasPermission('ios_setting_update') || hasPermission('app_config_update') || hasPermission('ads_config_update')
                 || hasPermission('api_setting_update') || hasPermission('api_key_read_all') || hasPermission('api_key_read')
                  || hasPermission('api_key_update') || hasPermission('api_key_delete') || hasPermission('all_page_read'))
-                <li class="nav-item dropdown @yield('mobile_apps')">
+                {{-- <li class="nav-item dropdown @yield('mobile_apps')">
                     <a href="javaScript:void(0)" class="nav-link has-dropdown" data-toggle="dropdown"><i
                                 class="bx bxl-flutter"></i>
                         @if(isAppMode())
@@ -895,11 +897,7 @@
                                                                          href="{{ route('ios.settings') }}">{{ __('iOS Setting') }}</a>
                             </li>
                         @endif
-                        {{--   @if(hasPermission('mobile_app_intro_read'))
-                               <li class="@yield('app_intro_settings_active')"><a class="nav-link"
-                                                                                  href="{{ route('app.intro.settings') }}">{{ __('App Intro') }}</a>
-                               </li>
-                           @endif--}}
+                      
                         @if(hasPermission('download_link_update'))
                             <li class="@yield('download_link_settings_active')"><a class="nav-link"
                                                                                    href="{{ route('download.link.settings') }}">{{ __('Download Link') }}</a>
@@ -919,11 +917,11 @@
                                                                       href="{{ route('mobile.gdpr.settings') }}">{{ __('GDPR') }}</a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
             @endif
             @if(hasPermission('addon_read'))
                 @if(settingHelper('current_version') != '1.0.0')
-                    <li class="nav-item dropdown @yield('addon_utility')">
+                    {{-- <li class="nav-item dropdown @yield('addon_utility')">
                         <a href="javaScript:void(0)" class="nav-link has-dropdown" data-toggle="dropdown"><i
                                     class="bx bx-extension"
                                     aria-hidden="true"></i><span>{{ __('Addons') }}</span></a>
@@ -935,7 +933,7 @@
                                                                      href="{{ route('admin.available.addons') }}">{{ __('Available Addons') }}</a>
                             </li>
                         </ul>
-                    </li>
+                    </li> --}}
                 @endif
             @endif
             {{-- @if(hasPermission('addon_read'))

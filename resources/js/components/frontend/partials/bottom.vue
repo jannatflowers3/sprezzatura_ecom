@@ -18,6 +18,62 @@
 						  <p>  <i class="fa-solid fa-message "></i> sales@sprezzaturabd.com</p>
 							</div>
 						</div>
+						<div class="footer-widget widget-border">
+							<!-- <h3>{{ lang.my_account }}</h3> -->
+							<ul class="global-list" v-if="!authUser">
+								<li>
+									<router-link :to="{ name: 'login' }">{{ lang.Login }}</router-link>
+								</li>
+								<li>
+									<router-link :to="{ name: 'register' }">{{ lang.create_account }}</router-link>
+								</li>
+							</ul>
+							<ul class="global-list" v-if="authUser && authUser.user_type == 'customer'">
+								<li>
+									<router-link :to="{ name: 'dashboard' }">{{ lang.my_profile }}</router-link>
+								</li>
+								<li>
+									<router-link :to="{ name: 'change.password' }">{{ lang.change_password }} </router-link>
+								</li>
+								<li>
+									<router-link :to="{ name: 'order.history' }">{{ lang.order_history }}</router-link>
+								</li>
+								<li>
+									<router-link :to="{ name: 'wishlist' }">{{ lang.my_wishlist }}</router-link>
+								</li>
+								<li>
+									<router-link :to="{ name: 'addresses' }">{{ lang.addresses }}</router-link>
+								</li>
+								<li>
+									<router-link :to="{ name: 'track.order' }">{{ lang.track_order }}</router-link>
+								</li>
+								<li>
+									<router-link :to="{ name: 'gift.voucher' }">{{ lang.gift_voucher }}</router-link>
+								</li>
+							</ul>
+							<ul class="global-list" v-else-if="authUser && (authUser.user_type == 'admin' || authUser.user_type == 'staff')">
+								<li
+									><a target="_blank" :href="getUrl('admin/dashboard')">{{ lang.dashboard }}</a></li
+								>
+								<li
+									><a target="_blank" :href="getUrl('admin/profile')">{{ lang.my_profile }}</a></li
+								>
+								<li
+									><a target="_blank" :href="getUrl('admin/password-change')">{{ lang.change_password }}</a></li
+								>
+							</ul>
+							<ul class="global-list" v-else-if="authUser && authUser.user_type == 'seller'">
+								<li
+									><a target="_blank" :href="getUrl('seller/dashboard')">{{ lang.dashboard }}</a></li
+								>
+								<li
+									><a target="_blank" :href="getUrl('seller/profile')">{{ lang.my_profile }}</a></li
+								>
+								<li
+									><a target="_blank" :href="getUrl('seller/password-change')">{{ lang.change_password }}</a></li
+								>
+							</ul>
+						</div>
 					</div>
 					<div class="col-lg-2 col-sm-6 col-md-6">
 						<div class="footer-widget widget-border">
@@ -83,8 +139,8 @@
 						  <p>  <i class="fa-solid fa-message "></i> sales@sprezzaturabd.com</p>
 							</div>
 						</div>
-					</div> -->
-					<!-- <div class="col-sm-6 col-md-6 col-lg-2" :class="[classObj()]">
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-2" :class="[classObj()]">
 						<div class="footer-widget widget-border">
 							<h3>COMPANY INFO</h3>
 							<ul class="global-list" v-for="(link, i) in usefulLinks" :key="i">
@@ -93,9 +149,9 @@
 								</li>
 							</ul>
 						</div>
-					</div> -->
+					</div>
 				
-					
+					 -->
 
 					<!-- <div class="col-sm-6 col-md-6" :class="[classObj()]">
 						<div class="footer-widget widget-border">
