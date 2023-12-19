@@ -13,7 +13,7 @@
                         src="{{($logo != [] && is_file_exists($logo['image_100x38'])) ? static_asset($logo['image_100x38']) : static_asset('img/Sprezzatura-Logo.png') }}"
                         alt="Logo">
                        
-                        <img src="{{ url('../../../../public/img/Sprezzatura-Logo.png') }} " alt="logo"> </a>
+                        </a>
         </div>
         <ul class="sidebar-menu">
             <li class="@yield('dashboard')"><a class="nav-link" href="{{ route('dashboard') }}"><i

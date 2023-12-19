@@ -219,7 +219,8 @@
                                                          id="img_profile" class="img-thumbnail site-icon">
                                                 @else
                                                     <img
-                                                        src="{{ static_asset('images/default/default-image-72x72.png') }}"
+                                                        {{-- src="{{ static_asset('images/default/default-image-72x72.png') }}" --}}
+                                                        src="{{ static_asset('images/default/Sprezzatura-Logo.png') }}"
                                                         alt="site-icon" id="img_profile"
                                                         class="img-thumbnail site-icon ">
                                                 @endif

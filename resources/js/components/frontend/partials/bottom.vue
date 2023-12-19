@@ -253,8 +253,10 @@
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="footer-bottom-content">
-					<div class="copyright">
+					<div class="col-lg-12 text-center">
+						<div class="copyright ">
 						<p>{{ settings.copyright }}</p>
+					</div>
 					</div>
 					<div class="payment-card">
 						<ul class="global-list">
