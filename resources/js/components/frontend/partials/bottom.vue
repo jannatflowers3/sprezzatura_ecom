@@ -287,6 +287,7 @@
 	</footer><!-- /.footer-section -->
 </template>
 
+
 <script>
 import chat_system from "../pages/addons/chat_system";
 

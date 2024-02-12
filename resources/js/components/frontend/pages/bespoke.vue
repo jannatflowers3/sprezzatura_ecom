@@ -5,12 +5,13 @@
 <section class="besboke_bg">
 <div class="container-fluid">
 <div class="row justify-content-center">
-    <h2 class="bespoke_title text-center">IF YOU IMAGINE IT, BESPOKE SHIRTS CAN CREATE IT!</h2>  
+    
     <div class="col-lg-8 col-md-8">
             <!-- besboke start -->
           <div class="besboke_overlay">
             <div class="besboke text-center">  
                 <div class="besboke_servive text-center">
+                    <h2 class="bespoke_title text-center">IF YOU IMAGINE IT, BESPOKE SHIRTS CAN CREATE IT!</h2>
                 <p>When it comes to made-to-measure and bespoke men’s shirts, there can be a bit of confusion around the difference between the two. Both options will provide you with a high-quality, well-fitting garment but the two differ when it comes to elements such as price and turnaround time and offer a much better fit than ordering clothes online.
                     So, whether you want to treat yourself to a dress shirt from an exclusive London tailor shop or you want to drop into your local tailor’s for a custom tailored shirt, here are the steps you will take when shopping for a made-to-measure or bespoke shirt from the best tailors available.</p>
                 </div>
@@ -34,7 +35,7 @@
 <section class="pattern_cutting">
 <div class="container">
 <div class="row justify-content-center">
-    <h2 class="text-center pattern_title">we want to ensure the end result is catered to your precise needs</h2>
+    <h2 class="text-center pattern_title">We want to ensure the end result is catered to your precise needs</h2>
     <div class="col-lg-6">
         <div class="pattern_chose">
             <h5> Choosing a pattern and style:</h5>
@@ -56,7 +57,7 @@
  <div class="row justify-content-center mt-5 pt-5">
     <div class="col-lg-6">
         <div class="pattern_content mt-5">
-            <h5> YOUR SPECIFICATION
+            <h5>  Your specification
             </h5>
             <p>The flawless fit and attention to detail of our bespoke shirts makes each creation a timeless one-off and their custom-made nature allows you to become the designer, adding or changing whichever elements you wish. Here, we note down all your design requests.</p>
             </div>
@@ -77,7 +78,7 @@
         </div> 
         <div class="col-lg-6">
             <div class="pattern_content mt-5 pt-5">
-                <h5> CRAFTING YOUR SHIRT
+                <h5> Crafting your shirt 
                 </h5>
                 <p>Next, our experienced seamstresses masterfully cut your chosen cloth by hand. They use pencil marks to indicate any specific requests such as a minutely shorter sleeve. Hand-worked sewing machines are then used to bring the shirt together - they produce stronger seams while maintaining accuracy..</p>
                 </div>
@@ -117,8 +118,7 @@
                 <h4>3. Choose Fabrics</h4>
                 <img :src="getUrl('public/img/finest-workmanship.png')" alt="pattern" class="img-fluid mt-5 " />
                 <p>An exciting aspect of a creating your new BESPOKE shirts is the luxury of choosing from an extensive collection of superb fabrics.We have a selection of over 1000 luxury European fabrics to choose from.
-
-                </p>
+                 </p>
                 </div>
             </div>
         </div>
